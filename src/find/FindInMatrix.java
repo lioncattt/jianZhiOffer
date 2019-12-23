@@ -13,16 +13,7 @@ package find;
  */
 public class FindInMatrix {
     public static void main(String[] args) {
-      /*  Scanner sc = new Scanner(System.in);
-        int rows = sc.nextInt();
-        int columns = sc.nextInt();
-        int[][] matrix = new int[rows][columns];
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                matrix[i][j] = sc.nextInt();
-            }
-        }
-        int n = sc.nextInt();*/
+
         int[][] matrix = {{1,2,8,9}, {2,4,9,12}, {4,7,10,13}, {6,8,11,15}};
         // 测试用例
         int n1 = 15; // maxNumber:15
@@ -35,6 +26,13 @@ public class FindInMatrix {
         System.out.println(findInMatrix(matrix, n3));
     }
 
+    /**
+     * 找左下角或右上角的数字分析，因为处于该位置的数字可以缩小最多的范围，不会出现重叠的范围
+     * @param matrix
+     * @param n
+     * @return
+     * 时间复杂度 O(n)
+     */
     public static boolean findInMatrix(int[][] matrix, int n) {
         if (matrix == null || matrix.length <= 0) {
             return false;
