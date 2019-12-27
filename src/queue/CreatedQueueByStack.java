@@ -24,12 +24,12 @@ public class CreatedQueueByStack {
         System.out.println(cqs.pop());
     }
 
-    public void push(int node) {
+    public void push(int node) { // O(1)
         stack1.push(node);
     }
 
-    public int pop() {
-        if (!stack2.empty()) {
+    public int pop() { // O(n)
+        if (!stack2.empty()) {  // 注意考虑若此时队列元素未全部弹出时继续插入元素，弹出时仍需保持原来的队列顺序
             return stack2.pop();
         }
         while (!stack1.empty()) {
