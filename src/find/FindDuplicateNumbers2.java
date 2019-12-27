@@ -9,7 +9,8 @@ package find;
  */
 public class FindDuplicateNumbers2 {
     public static void main(String[] args) {
-        int[] a = new int[]{2, 3, 5, 4, 3, 2, 6, 7};
+        //int[] a = new int[]{2, 3, 5, 4, 3, 2, 6, 7};
+        int[] a = new int[]{3,1,3,4,2};
         System.out.println(getDuplication(a, a.length, 1, a.length - 1));
     }
 
