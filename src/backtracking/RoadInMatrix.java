@@ -18,6 +18,14 @@ public class RoadInMatrix {
         System.out.println(hasPath(matrix, 3, 4, str));
     }
 
+    /**
+     * 时间复杂度O(n^2) 空间复杂度O(n^2)
+     * @param matrix
+     * @param rows
+     * @param cols
+     * @param str
+     * @return
+     */
     public static boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
         if (matrix == null || rows < 1 || cols < 1 || str == null) {
             return false;
@@ -32,6 +40,7 @@ public class RoadInMatrix {
         }
         return false;
     }
+
 
     private static boolean hasPathCore(char[] matrix, boolean[] memo, int rows, int cols,
                                        int row, int col, char[] str, int strIndex) {
@@ -55,7 +64,7 @@ public class RoadInMatrix {
 
             //若递归此次节点未找到任何一条路径 则重置memo 并且 返回之前的字符 继续尝试递归
             if (!hasPath) {
-                memo[row * cols + col] = false;
+                memo[row * cols + col] = false; //还原，让该节点能继续被下次遍历递归
                 strIndex--;
             }
 
