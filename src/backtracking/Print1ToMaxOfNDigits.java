@@ -30,6 +30,10 @@ public class Print1ToMaxOfNDigits {
         }
     }
 
+    /**
+     * 空间复杂度O(n) 时间复杂度O(n)
+     * @param n
+     */
     public static void print1ToMaxOfNDigits2(int n) {
         if (n <= 0) {
             return;
