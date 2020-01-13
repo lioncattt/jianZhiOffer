@@ -1,4 +1,4 @@
-package manageExcpetion;
+package backtracking;
 
 /**
  * @author cj
