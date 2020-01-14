@@ -27,7 +27,9 @@ public class BinaryTreeNode {
 
     public static void printTree(BinaryTreeNode root) {
         ArrayList<ArrayList<Integer>> result = Print(root);
-        System.out.println();
+        result.forEach((list)->{
+            System.out.println(list);
+        });
     }
 
     static ArrayList<ArrayList<Integer> > Print(BinaryTreeNode pRoot) {
