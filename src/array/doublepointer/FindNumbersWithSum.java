@@ -14,10 +14,11 @@ import java.util.ArrayList;
  */
 public class FindNumbersWithSum {
     public static void main(String[] args) {
-
+        int[] a = {1,12,33,44,65};
+        System.out.println(findNumbersWithSum(a, 34));
     }
 
-    public static ArrayList<Integer> FindNumbersWithSum(int [] array, int sum) {
+    public static ArrayList<Integer> findNumbersWithSum(int [] array, int sum) {
         ArrayList<Integer> list = new ArrayList<>();
         if (array == null || array.length <= 1) {
             return list;
@@ -34,6 +35,7 @@ public class FindNumbersWithSum {
             } else {
                 list.add(array[i]);
                 list.add(array[j]);
+                return list;
             }
         }
         return new ArrayList<>();
