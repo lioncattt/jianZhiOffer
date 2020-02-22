@@ -1,4 +1,4 @@
-package array.sort;
+package binarysearch;
 
 /**
  * @author cj
