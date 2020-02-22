@@ -11,7 +11,7 @@ package linkedlist;
  * 思路：(1) 暴力破解 时间复杂度O(m * n) m，n为两个链表的长度
  * (2) 栈 将链表放入两个栈，从后往前遍历，比较找到最后一个相同的节点
  *     空间复杂度 O(m + n) 时间复杂度O(n)
- * (3)
+ * (3) 求出两个链表长度之差，让长的先走该差值的步数，再两个链表一起走
  */
 public class FindFirstCommonNode {
     public static void main(String[] args) {
