@@ -1,4 +1,4 @@
-package array;
+package array.doublepointer;
 
 import java.util.Arrays;
 
