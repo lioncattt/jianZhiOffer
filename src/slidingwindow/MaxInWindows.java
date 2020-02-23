@@ -13,10 +13,28 @@ import java.util.ArrayList;
  */
 public class MaxInWindows {
     public static void main(String[] args) {
-
+        int[] a = {2,3,4,2,6,2,5,1};
+        System.out.println(maxInWindows(a, 3));
     }
 
     public static ArrayList<Integer> maxInWindows(int [] num, int size) {
-        return null;
+        ArrayList<Integer> ret = new ArrayList<>();
+        if (num == null || num.length <= 0 || size > num.length) {
+            return ret;
+        }
+        for (int i = 0; i < num.length; i++) {
+            int length = i + size - 1;
+            int index = i;
+            int max = num[i];
+            if (length < num.length) {
+                while ( index < length) {
+                    max = max >= num[index + 1] ? max : num[index + 1];
+                    index++;
+
+                }
+                ret.add(max);
+            }
+        }
+        return ret;
     }
 }
